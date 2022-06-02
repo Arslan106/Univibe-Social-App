@@ -1,5 +1,5 @@
-const Joi = require('joi');
-import OurJWT from '../../utils/jwt'
+import Joi from 'joi'
+// import OurJWT from '../../utils/jwt/index.js'
 
 const ValidateCreatePost  = (req,res,next)=>{
 
@@ -41,6 +41,5 @@ const ValidateCreatePost  = (req,res,next)=>{
 }
 
 
-module.exports = {
+export default  
     ValidateCreatePost
-}

@@ -79,4 +79,6 @@ import jwt from 'jsonwebtoken'
 //   }
 }
 
-module.exports = OurJWT
+// export default  OurJWT
+
+export default OurJWT;

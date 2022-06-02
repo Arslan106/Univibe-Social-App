@@ -1,38 +1,41 @@
 // import cors from 'cors'
-const  express  =  require('express')
-const cors = require('cors')
+// const  express  =  require('express')
+// const cors = require('cors')
+import cors from 'cors';
+import express from 'express';
 // ROUTES
-const ClutRoutes =  require('./Routes/Routes.Club')
-const PingRoutes = require('./Routes/Routes.Ping')
-const BusinessRoutes = require('./Routes/Routes.business')
-const AccountRoutes = require('./Routes/Routes.account')
-const StudentRoutes = require('./Routes/Routes.student')
+import ClutRoutes from './Routes/Routes.Club.js'
+import PingRoutes from './Routes/Routes.Ping.js'
+import BusinessRoutes from './Routes/Routes.business.js'
+import AccountRoutes from './Routes/Routes.account.js'
+import StudentRoutes from './Routes/Routes.student.js'
 
 class App {
   constructor() {
     this.app = express()
     this.isProduction = false
     this.initializeMiddlewares()
-   
+
   }
 
-   initializeMiddlewares() {
+  initializeMiddlewares() {
     this.app.use(express.json())
-    this.app.use(cors({credentials: true, origin: true}))
+    this.app.use(cors({ credentials: true, origin: true }))
     this.app.use(express.urlencoded({ extended: true }))
     this.initializeRoutes()
-   
+
   }
 
-   initializeRoutes()  {
+  initializeRoutes() {
     this.app.use('/', PingRoutes)
-    
+
     this.app.use('/club', ClutRoutes)
     this.app.use('/business', BusinessRoutes)
     this.app.use('/account', AccountRoutes)
     this.app.use('/student', StudentRoutes)
-   
+
   }
 }
 
-module.exports =  App
+// export default   App
+export default App

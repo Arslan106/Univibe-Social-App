@@ -1,7 +1,7 @@
-import AccountsService from "./Service";
-import OurJWT from "../../utils/jwt";
+import AccountsService from "./Service.js";
+import OurJWT from "../../utils/jwt/index.js";
 import bcrypt from "bcrypt";
-import StripeTokenService from "../StripeTokens/Service";
+import StripeTokenService from "../StripeTokens/Service.js";
 // import '@types/ua-parser-js'
 class AccountsController {
   // this.Service;
@@ -483,4 +483,4 @@ class AccountsController {
   }
 }
 
-module.exports = AccountsController;
+export default  AccountsController;

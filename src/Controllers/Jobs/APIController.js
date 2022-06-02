@@ -1,4 +1,4 @@
-import JobService from './Service'
+import JobService from './Service.js'
 
 
 // import '@types/ua-parser-js'
@@ -98,4 +98,4 @@ class JobsController {
 
 }
 
-module.exports = JobsController
+export default  JobsController

@@ -1,4 +1,4 @@
-import StripeTokenModel from './Model'
+import StripeTokenModel from './Model.js'
 import bcrypt from 'bcrypt'
 
 class StripeTokenService {
@@ -29,5 +29,5 @@ class StripeTokenService {
  
 
 
-module.exports = StripeTokenService
+export default  StripeTokenService
 

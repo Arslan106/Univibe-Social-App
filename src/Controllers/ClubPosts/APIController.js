@@ -1,7 +1,7 @@
-import CubPostService from './Service'
-import OurJWT from '../../utils/jwt'
+import CubPostService from './Service.js'
+import OurJWT from '../../utils/jwt/index.js'
 import bcrypt from 'bcrypt'
-import AccountService from '../Accounts/Service'
+import AccountService from '../Accounts/Service.js'
 // import '@types/ua-parser-js'
 class ClubPostController {
 
@@ -97,4 +97,4 @@ class ClubPostController {
  
 }
 
-module.exports = ClubPostController
+export default  ClubPostController

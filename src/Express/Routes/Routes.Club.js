@@ -2,22 +2,22 @@ import express from 'express';
 import {
     ValidateRegistration,
     ValidateProfileUpload
-} from '../../Controllers/Accounts/APIValidation'
-import {
-    ValidateCreatePost
-}
-    from '../../Controllers/ClubPosts/APIValidation'
-import AccountsController from '../../Controllers/Accounts/APIController'
-import OurJWT from '../../utils/jwt'
-import ClubPostController from '../../Controllers/ClubPosts/APIController'
+} from '../../Controllers/Accounts/APIValidation.js'
+import
+ValidateCreatePost
+
+    from '../../Controllers/ClubPosts/APIValidation.js'
+import AccountsController from '../../Controllers/Accounts/APIController.js'
+import OurJWT from '../../utils/jwt/index.js'
+import ClubPostController from '../../Controllers/ClubPosts/APIController.js'
 
 const router = express.Router();
 const Controller = new AccountsController()
 router.post('/register', ValidateRegistration, Controller.CreateClubAccount);
 
 
-router.post('/post', verifyClub,ValidateCreatePost,new ClubPostController().CreateClubPost);
-router.get('/posts', verifyClub,new ClubPostController().GetPosts);
+router.post('/post', verifyClub, ValidateCreatePost, new ClubPostController().CreateClubPost);
+router.get('/posts', verifyClub, new ClubPostController().GetPosts);
 
 
 
@@ -41,4 +41,4 @@ async function verifyClub(req, res, next) {
 
     }
 }
-module.exports = router;
+export default router;

@@ -1,7 +1,7 @@
-const Joi = require('joi');
-import OurJWT from '../../utils/jwt'
+import Joi from "joi"
+// import OurJWT from '../../utils/jwt'
 
-const ValidateDealPost = (req, res, next) => {
+export const ValidateDealPost = (req, res, next) => {
 
     try {
         if(req.body.advertType){
@@ -164,7 +164,7 @@ const ValidateDealPost = (req, res, next) => {
     }
   }
 
-  const ValidateDeleteDealsPost = (req, res, next) => {
+ export  const ValidateDeleteDealsPost = (req, res, next) => {
 
     try {
       const Result = Joi.object({
@@ -193,7 +193,7 @@ const ValidateDealPost = (req, res, next) => {
     }
   }
 
-  const ValidateGetDealsForStudent = (req, res, next) => {
+  export const ValidateGetDealsForStudent = (req, res, next) => {
 
     try {
       const Result = Joi.object({
@@ -221,10 +221,3 @@ const ValidateDealPost = (req, res, next) => {
   
     }
   }
-
-module.exports = {
-    ValidateDealPost,
-    ValidateDeleteDealsPost,
-    ValidateGetDealsForStudent
-    
-}

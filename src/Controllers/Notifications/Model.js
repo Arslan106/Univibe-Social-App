@@ -1,5 +1,5 @@
-import { boolean } from 'joi'
-import * as mongoose from 'mongoose'
+// import { boolean } from 'joi'
+import mongoose from 'mongoose'
 
 const NotificationSchema = new mongoose.Schema(
   {

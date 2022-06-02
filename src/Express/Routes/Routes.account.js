@@ -3,15 +3,15 @@ import {
 ValidateLogin,
 ValidateProfileUpload,
 ValidateAddDeviceToken
-}   from '../../Controllers/Accounts/APIValidation'
+}   from '../../Controllers/Accounts/APIValidation.js'
 import {
     ValidateSendNotification
 }
-from '../../Controllers/Notifications/APIValidation'
-import NotificationControllerClass from  '../../Controllers/Notifications/APIController'
+from '../../Controllers/Notifications/APIValidation.js'
+import NotificationControllerClass from  '../../Controllers/Notifications/APIController.js'
 
-import AccountsController from '../../Controllers/Accounts/APIController'
-import OurJWT from '../../utils/jwt'
+import AccountsController from '../../Controllers/Accounts/APIController.js'
+import OurJWT from '../../utils/jwt/index.js'
 
 const router = express.Router();
 const Controller = new AccountsController()
@@ -50,4 +50,4 @@ async function verifyAccount(req, res, next) {
     }
 }
 
-module.exports = router;
+export default  router;

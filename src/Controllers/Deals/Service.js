@@ -1,4 +1,4 @@
-import DealsModel from './Model'
+import DealsModel from './Model.js'
 import bcrypt from 'bcrypt'
 
 class DealsService {
@@ -42,5 +42,5 @@ class DealsService {
  
 
 
-module.exports = DealsService
+export default  DealsService
 

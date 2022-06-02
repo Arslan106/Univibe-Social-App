@@ -1,4 +1,4 @@
-import BuySellPostModel from './Model'
+import BuySellPostModel from './Model.js'
 import bcrypt from 'bcrypt'
 
 class BuySellPostService {
@@ -56,5 +56,5 @@ class BuySellPostService {
  
 
 
-module.exports = BuySellPostService
+export default  BuySellPostService
 

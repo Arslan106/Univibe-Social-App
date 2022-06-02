@@ -1,4 +1,4 @@
-import DealsService from './Service'
+import DealsService from './Service.js'
 
 
 // import '@types/ua-parser-js'
@@ -123,4 +123,4 @@ class DealsController {
 
 }
 
-module.exports = DealsController
+export default  DealsController

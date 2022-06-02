@@ -2,19 +2,19 @@ import express from 'express';
 import {
     ValidateStudentRegistration,
     FollowValidation
-} from '../../Controllers/Accounts/APIValidation'
-import AccountsController from '../../Controllers/Accounts/APIController'
-import { ValidateBuySellPost, ValidateGetBuySetByCategory, ValidateDeleteBuySellPost } from '../../Controllers/BuySell/APIValidation'
+} from '../../Controllers/Accounts/APIValidation.js'
+import AccountsController from '../../Controllers/Accounts/APIController.js'
+import { ValidateBuySellPost, ValidateGetBuySetByCategory, ValidateDeleteBuySellPost } from '../../Controllers/BuySell/APIValidation.js'
 import {
     ValidateGetDealsForStudent
-} from '../../Controllers/Deals/APIValidation'
-import OurJWT from '../../utils/jwt'
-import BuySellPostController from '../../Controllers/BuySell/APIController'
-import ClubPostController from '../../Controllers/ClubPosts/APIController'
-import AccountService from '../../Controllers/Accounts/Service'
-import DealsPostController from '../../Controllers/Deals/APIController'
-import AccommodationPostController from '../../Controllers/AccommodationPosts/APIController'
-import JobPostController from '../../Controllers/Jobs/APIController'
+} from '../../Controllers/Deals/APIValidation.js'
+import OurJWT from '../../utils/jwt/index.js'
+import BuySellPostController from '../../Controllers/BuySell/APIController.js'
+import ClubPostController from '../../Controllers/ClubPosts/APIController.js'
+import AccountService from '../../Controllers/Accounts/Service.js'
+import DealsPostController from '../../Controllers/Deals/APIController.js'
+import AccommodationPostController from '../../Controllers/AccommodationPosts/APIController.js'
+import JobPostController from '../../Controllers/Jobs/APIController.js'
 
 const router = express.Router();
 const Controller = new AccountsController()
@@ -87,4 +87,4 @@ async function verifyStudent(req, res, next) {
     }
 }
 
-module.exports = router;
+export default  router;

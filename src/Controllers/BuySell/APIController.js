@@ -1,4 +1,4 @@
-import BuySellPostService from './Service'
+import BuySellPostService from './Service.js'
 
 
 // import '@types/ua-parser-js'
@@ -89,4 +89,4 @@ class BuySellPostController {
 
 }
 
-module.exports = BuySellPostController
+export default  BuySellPostController

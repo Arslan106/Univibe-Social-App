@@ -1,7 +1,7 @@
-const Joi = require('joi');
-import OurJWT from '../../utils/jwt'
+import Joi from 'joi'
+import OurJWT from '../../utils/jwt/index.js'
 
-const ValidateAccomodationAd = (req, res, next) => {
+export const ValidateAccomodationAd = (req, res, next) => {
 
     try {
       const Result = Joi.object({
@@ -69,7 +69,7 @@ const ValidateAccomodationAd = (req, res, next) => {
     }
   }
 
-  const ValidateDeleteAccommodationPost = (req, res, next) => {
+  export const ValidateDeleteAccommodationPost = (req, res, next) => {
 
     try {
       const Result = Joi.object({
@@ -97,9 +97,3 @@ const ValidateAccomodationAd = (req, res, next) => {
   
     }
   }
-
-
-module.exports = {
-    ValidateAccomodationAd,
-    ValidateDeleteAccommodationPost
-}

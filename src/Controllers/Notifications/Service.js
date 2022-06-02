@@ -1,4 +1,4 @@
-import NotificationModel from './Model'
+import NotificationModel from './Model.js'
 class NotificationService {
      async CreateNotification(data) {
         return new Promise((resolve, reject) => {
@@ -24,5 +24,5 @@ class NotificationService {
  
 
 
-module.exports = NotificationService
+export default  NotificationService
 

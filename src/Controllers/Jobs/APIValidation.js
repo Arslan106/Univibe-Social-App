@@ -1,6 +1,6 @@
-const Joi = require('joi');
+import Joi from "joi"
 
-const ValidateJobPost = (req, res, next) => {
+export const ValidateJobPost = (req, res, next) => {
 
     try {
         const Result = Joi.object({
@@ -58,7 +58,7 @@ const ValidateJobPost = (req, res, next) => {
     }
 }
 
-const ValidateDeleteJobPost = (req, res, next) => {
+export  const ValidateDeleteJobPost = (req, res, next) => {
 
     try {
       const Result = Joi.object({
@@ -87,10 +87,3 @@ const ValidateDeleteJobPost = (req, res, next) => {
     }
   }
 
-
-
-module.exports = {
-    ValidateJobPost,
-    ValidateDeleteJobPost
-
-}

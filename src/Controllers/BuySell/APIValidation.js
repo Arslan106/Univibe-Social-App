@@ -1,7 +1,7 @@
-const Joi = require('joi');
-import OurJWT from '../../utils/jwt'
+import Joi from "joi"
+// import OurJWT from '../../utils/jwt'
 
-const ValidateBuySellPost = (req, res, next) => {
+export const ValidateBuySellPost = (req, res, next) => {
 
     try {
       const Result = Joi.object({
@@ -49,7 +49,7 @@ const ValidateBuySellPost = (req, res, next) => {
   
     }
   }
-const ValidateGetBuySetByCategory = (req, res, next) => {
+export const ValidateGetBuySetByCategory = (req, res, next) => {
 
     try {
       const Result = Joi.object({
@@ -80,7 +80,7 @@ const ValidateGetBuySetByCategory = (req, res, next) => {
   
     }
   }
-  const ValidateDeleteBuySellPost = (req, res, next) => {
+  export const ValidateDeleteBuySellPost = (req, res, next) => {
 
     try {
       const Result = Joi.object({
@@ -109,8 +109,3 @@ const ValidateGetBuySetByCategory = (req, res, next) => {
     }
   }
 
-module.exports = {
-    ValidateBuySellPost,
-    ValidateGetBuySetByCategory,
-    ValidateDeleteBuySellPost
-}

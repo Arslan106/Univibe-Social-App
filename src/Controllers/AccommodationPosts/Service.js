@@ -1,6 +1,6 @@
-import AccommodationPostModel from './Model'
+import AccommodationPostModel from './Model.js'
 import bcrypt from 'bcrypt'
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 
 class AccommodationPostService {
      async CreatePost(data) {
@@ -38,5 +38,5 @@ class AccommodationPostService {
  
 
 
-module.exports = AccommodationPostService
+export default  AccommodationPostService
 

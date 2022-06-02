@@ -1,5 +1,5 @@
-import { number } from 'joi'
-import * as mongoose from 'mongoose'
+// import { number } from 'joi'
+import mongoose from 'mongoose'
 
 const AccommodationPostsSchema = new mongoose.Schema(
   {

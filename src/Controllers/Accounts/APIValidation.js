@@ -1,7 +1,7 @@
-const Joi = require('joi');
+import Joi from "joi"
 
 
-const ValidateRegistration = (req, res, next) => {
+export const ValidateRegistration = (req, res, next) => {
 
   try {
     const Result = Joi.object({
@@ -41,7 +41,7 @@ const ValidateRegistration = (req, res, next) => {
   }
 }
 
-const ValidateProfileUpload = (req, res, next) => {
+export const ValidateProfileUpload = (req, res, next) => {
 
   try {
     const Result = Joi.object({
@@ -72,7 +72,7 @@ const ValidateProfileUpload = (req, res, next) => {
 }
 
 
-const ValidateBusinessRegistration = (req, res, next) => {
+export const ValidateBusinessRegistration = (req, res, next) => {
 
   try {
     const Result = Joi.object({
@@ -110,7 +110,7 @@ const ValidateBusinessRegistration = (req, res, next) => {
   }
 }
 
-const ValidateAddDeviceToken = (req, res, next) => {
+export const ValidateAddDeviceToken = (req, res, next) => {
 
   try {
     const Result = Joi.object({
@@ -139,7 +139,7 @@ const ValidateAddDeviceToken = (req, res, next) => {
 }
 
 
-const ValidateLogin = (req, res, next) => {
+export const ValidateLogin = (req, res, next) => {
 
   try {
     const Result = Joi.object({
@@ -171,7 +171,7 @@ const ValidateLogin = (req, res, next) => {
 
 
 
-const ValidateStudentRegistration = (req, res, next) => {
+export const ValidateStudentRegistration = (req, res, next) => {
 
   const {firstName,lastName,email,password,gender,studentNumber,studentType,university,course,academicYear,cover,graduationYear} = req.body
   try {
@@ -209,7 +209,7 @@ const ValidateStudentRegistration = (req, res, next) => {
 }
 
 
-const FollowValidation = (req, res, next) => {
+export const FollowValidation = (req, res, next) => {
 
   try {
     const Result = Joi.object({
@@ -236,13 +236,3 @@ const FollowValidation = (req, res, next) => {
   }
 }
 
-module.exports = {
-  ValidateRegistration,
-  ValidateBusinessRegistration,
-  ValidateLogin,
-  ValidateStudentRegistration,
-  ValidateProfileUpload,
-  FollowValidation,
-  ValidateAddDeviceToken
-  
-}

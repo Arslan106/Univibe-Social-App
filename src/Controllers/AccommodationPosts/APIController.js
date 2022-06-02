@@ -1,4 +1,4 @@
-import AccommodationPostService from './Service'
+import AccommodationPostService from './Service.js'
 
 
 // import '@types/ua-parser-js'
@@ -109,4 +109,4 @@ class AccommodationPostController {
 
 }
 
-module.exports = AccommodationPostController
+export default  AccommodationPostController

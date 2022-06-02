@@ -1,4 +1,4 @@
-import AppAccountModel from './Model'
+import AppAccountModel from './Model.js'
 import bcrypt from 'bcrypt'
 
 class AppAccountService {
@@ -84,5 +84,5 @@ class AppAccountService {
  
 
 
-module.exports = AppAccountService
+export default  AppAccountService
 

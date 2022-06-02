@@ -2,19 +2,19 @@ import express from 'express';
 import {
 ValidateRegistration,
 ValidateBusinessRegistration,
-}   from '../../Controllers/Accounts/APIValidation'
+}   from '../../Controllers/Accounts/APIValidation.js'
 import {
     ValidateAccomodationAd,
     ValidateDeleteAccommodationPost
-} from '../../Controllers/AccommodationPosts/APIValidation'
-import AccountsController from '../../Controllers/Accounts/APIController'
-import OurJWT from '../../utils/jwt'
-import AccommodationPostController from '../../Controllers/AccommodationPosts/APIController'
-import {ValidateDealPost,ValidateDeleteDealsPost} from '../../Controllers/Deals/APIValidation'
+} from '../../Controllers/AccommodationPosts/APIValidation.js'
+import AccountsController from '../../Controllers/Accounts/APIController.js'
+import OurJWT from '../../utils/jwt/index.js'
+import AccommodationPostController from '../../Controllers/AccommodationPosts/APIController.js'
+import {ValidateDealPost,ValidateDeleteDealsPost} from '../../Controllers/Deals/APIValidation.js'
 import {ValidateJobPost,
-    ValidateDeleteJobPost} from '../../Controllers/Jobs/APIValidation'
-import DealsPostController from '../../Controllers/Deals/APIController'
-import JobPostController from '../../Controllers/Jobs/APIController'
+    ValidateDeleteJobPost} from '../../Controllers/Jobs/APIValidation.js'
+import DealsPostController from '../../Controllers/Deals/APIController.js'
+import JobPostController from '../../Controllers/Jobs/APIController.js'
 
 const router = express.Router();
 const Controller = new AccountsController()
@@ -60,4 +60,4 @@ async function verifyCBusiness(req, res, next) {
     }
 }
 
-module.exports = router;
+export default  router;

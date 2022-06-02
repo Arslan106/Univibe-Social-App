@@ -1,10 +1,13 @@
-import NotificationService from './Service'
-import AccountService from '../Accounts/Service'
+import NotificationService from './Service.js'
+import AccountService from '../Accounts/Service.js'
 
 
-var admin = require("firebase-admin");
+// var admin = require("firebase-admin");
+import admin from "firebase-admin"
+import serviceAccount from "../../firebase-config.json"
+// import * as M from '../../firebase-config.json';
 
-var serviceAccount = require("../../firebase-config.json");
+// const serviceAccount = require('../../firebase-config.json')
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -22,9 +25,9 @@ class NotificationController {
                 detailText = temp[0].length > 25 ? `${temp[0].substr(0, 25)}...` : temp[0]
             }
             else
-            detailText = detailText.length > 25 ? `${detailText.substr(0, 25)}...` : detailText
+                detailText = detailText.length > 25 ? `${detailText.substr(0, 25)}...` : detailText
 
-            let data = { notifier, title, detail:detailText, payload, navigateTo, type }
+            let data = { notifier, title, detail: detailText, payload, navigateTo, type }
             const newNotification = await new NotificationService().CreateNotification(data)
             if (newNotification) {
                 res.status(200).json({ status: true })
@@ -36,7 +39,7 @@ class NotificationController {
                             title: title,
                             body: detailText
                         },
-                        data: { "payload":JSON.stringify(payload), "navigateTo":navigateTo,"type":type }
+                        data: { "payload": JSON.stringify(payload), "navigateTo": navigateTo, "type": type }
 
                     }
                     admin.messaging().sendToDevice(account.deviceToken, _payload)
@@ -79,4 +82,4 @@ class NotificationController {
 
 }
 
-module.exports = NotificationController
+export default NotificationController

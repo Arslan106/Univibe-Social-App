@@ -1,6 +1,6 @@
-const Joi = require('joi');
+import Joi from "joi"
 
-const ValidateSendNotification = (req, res, next) => {
+export const ValidateSendNotification = (req, res, next) => {
 
     try {
         const Result = Joi.object({
@@ -36,7 +36,4 @@ const ValidateSendNotification = (req, res, next) => {
         res.status(422).json({ message: 'Validation Failed' })
 
     }
-}
-module.exports = {
-    ValidateSendNotification,
 }

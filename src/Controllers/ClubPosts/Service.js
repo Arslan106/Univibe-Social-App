@@ -1,4 +1,4 @@
-import ClubPostModel from './Model'
+import ClubPostModel from './Model.js'
 import bcrypt from 'bcrypt'
 
 class ClubPostService {
@@ -85,5 +85,5 @@ async ClubPostsWithDetail(id) {
  
 
 
-module.exports = ClubPostService
+export default  ClubPostService
 
